@@ -1,0 +1,12 @@
+INDEX VERSION 1.126+/Users/theandrealiu/Desktop/AP CSA/MyFirstProject/.metadata/.plugins/org.eclipse.jdt.core
+363152344.index
+2225827089.index
+2670414054.index
+2720140819.index
+2499292115.index
+11171121.index
+97863960.index
+1271342938.index
+950241290.index
+3657721178.index
+1124887105.index

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;codeOne.classOne.java&apos; to &apos;AsciiBox.java&apos;&#x0A;- Original project: &apos;MyFirstProject&apos;&#x0A;- Original element: &apos;codeOne.classOne.java&apos;&#x0A;- Renamed element: &apos;codeOne.AsciiBox.java&apos;" description="Rename compilation unit &apos;classOne.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;codeOne{classOne.java" name="AsciiBox.java" references="false" stamp="1517438595687" version="1.0"/>
+</session>
