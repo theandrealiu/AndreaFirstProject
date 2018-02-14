@@ -24,8 +24,9 @@ public class Quadratic
 
 	public void setEquation(int quadA, int quadB, int quadC)
 	{
-
-
+		a = (double)quadA;
+		 b = (double)quadB;
+		 c = (double)quadC;
  	}
 
 	public void calcRoots( )

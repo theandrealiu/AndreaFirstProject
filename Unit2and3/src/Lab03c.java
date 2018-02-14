@@ -26,6 +26,7 @@ public class Lab03c
 	c = keyboard.nextInt();
 	
 	Quadratic quad = new Quadratic(a,b,c);
+	quad.setEquation(a,b,c);
 	quad.calcRoots();
 	quad.print();
 	
