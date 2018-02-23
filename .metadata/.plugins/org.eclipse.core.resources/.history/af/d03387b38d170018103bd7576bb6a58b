@@ -1,0 +1,77 @@
+//© A+ Computer Science  -  www.apluscompsci.com
+//Name -
+//Date -
+//Class - 
+//Lab  -
+
+import static java.lang.System.*;
+
+public class Triples
+{
+   private int number;
+   String output = "";
+
+	public Triples()
+	{
+		this(0);
+	}
+
+	public Triples(int num)
+	{
+	}
+
+	public void setNum(int num)
+	{
+		number = num;
+	}
+	
+	public void greatestCommonFactor()
+	{
+		for (int a = 1; a <= number; a++){
+			if (a % 2 == 1){
+				for (int b = a; b <= number; b++){
+					if (b % 2 == 0){
+						for (int c = b; c <= number; c++){
+							if (c*c == a*a + b*b){
+								for (int i = 2; i < b; i++){
+										if (a%i != 0){
+											for (int j = 2; j < c; j++){
+												if (a%j != 0){
+													System.out.println( a + " " + b + " " + c);
+												}
+										}
+								}
+								}
+							}
+						}
+					}
+				}
+			}
+			if (a % 2 == 0){
+				for (int b = a; b < number; b++){
+					if (b % 2 == 1){
+						for (int c = b; c < number; c++){
+								if (c*c == a*a + b*b){
+									for (int i = 2; i < b; i++){
+										if (a%i != 0){
+											for (int j = 2; j < c; j++){
+												if (a%j != 0){
+													System.out.println( a + " " + b + " " + c);
+												}
+										}
+								}
+								}
+								}
+			
+		}
+					}
+				}
+			}
+		}
+	}
+
+	public String toString()
+	{
+		return output+"\n";
+	}
+}
