@@ -8,5 +8,15 @@
     "location": "/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar",
     "status": "UNRESOLVED",
     "error": "Could not transfer artifact jre:jre:zip:call:1.0.0 from/to remote-models (http://download.eclipse.org/recommenders/models/kepler/): Error transferring file, server returned status code 307"
+  },
+  "/Users/theandrealiu/Desktop/AP CSA/Unit7/src": {
+    "location": "/Users/theandrealiu/Desktop/AP CSA/Unit7/src",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027/Users/theandrealiu/Desktop/AP CSA/Unit7/src\u0027. Skipped."
+  },
+  "/Users/theandrealiu/Desktop/AP CSA/Unit8/src": {
+    "location": "/Users/theandrealiu/Desktop/AP CSA/Unit8/src",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027/Users/theandrealiu/Desktop/AP CSA/Unit8/src\u0027. Skipped."
   }
 }
