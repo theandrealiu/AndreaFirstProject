@@ -13,12 +13,6 @@ public class Grades
 	//instance variables
 	double[] Grades = {};
 	private int len;
-	
-
-	//constructor
-	
-
-
 public String setGrades(int length,double[] Input){
 	Grades = Input;
 	len = length;
@@ -28,35 +22,21 @@ public String setGrades(int length,double[] Input){
 	}
 	return output;
 }
-	//set method
-
-
-
 	private double getSum()
 	{
 		double sum=0.0;
 		for (int i = 0; i<len;i++){
 			sum = sum + Grades[i];
 		}
-
-
 		return sum;
 	}
-
 	public String getAverage()
 	{
 		double average=0.0;
 		average = getSum()/len;
-
-
 		return String.format("%.2f\n", average);
 	}
 public String toString(){
 	return setGrades(len,Grades) + "\n" + "average: " + getAverage() + "\n\n";
-}
-
-	
-
-
-
+	}
 }
