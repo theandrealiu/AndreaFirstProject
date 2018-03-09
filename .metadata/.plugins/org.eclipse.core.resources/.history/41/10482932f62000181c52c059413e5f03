@@ -1,0 +1,6 @@
+
+public class Lab {
+	public static void main(String args[]){
+		Digits d1 = new Digits(15704);
+	}
+}

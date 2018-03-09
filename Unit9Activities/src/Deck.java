@@ -13,7 +13,7 @@ public class Deck {
 	/**
 	 * cards contains all the cards in the deck.
 	 */
-	private Card[] cards;
+	private ArrayList<Card> cards = new ArrayList<Card>();
 
 	/**
 	 * size is the number of not-yet-dealt cards.
@@ -35,10 +35,10 @@ public class Deck {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
 		size = ranks.length*suits.length;
 		int counter = 0;
-		cards = new Card[size];
+		cards = new ArrayList<Card>(size);
 		for (int i = 0; i<ranks.length;i++){
 			for (int j = 0; j<suits.length;j++){
-				cards[counter] = new Card(ranks[i],suits[j],values[i]);
+				cards.add( new Card(ranks[i],suits[j],values[i]));
 				counter++;
 			}
 		}
@@ -51,7 +51,7 @@ public class Deck {
 	 */
 	public boolean isEmpty() {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
-		if (cards.length == 0){
+		if (cards.size() == 0){
 			return true;
 		}
 		else{
@@ -88,9 +88,9 @@ public class Deck {
 			temp = cardValues[k];
 			cardValues[k] = values[j];
 			values[j]= temp;
-			output = output + cards[j] + ", ";
+			output = output + cards.get(j) + ", ";
 			}
-		size = cards.length;
+		size = cards.size();
 		return "Shuffled Deck: " + output;
 	}
 
@@ -106,7 +106,7 @@ public class Deck {
 		}
 		else{
 			size = size-1;
-			Card c = cards[size];
+			Card c = cards.get(size);
 			return c;
 		}
 		
@@ -121,7 +121,7 @@ public class Deck {
 		String rtn = "size = " + size + "\nUndealt cards: \n";
 
 		for (int k = size - 1; k >= 0; k--) {
-			rtn = rtn + cards[k];
+			rtn = rtn + cards.get(k);
 			if (k != 0) {
 				rtn = rtn + ", ";
 			}
