@@ -9,7 +9,7 @@ public class Lab18e
 {
 	public static void main( String args[] ) throws IOException
 	{
-		Scanner file = new Scanner(new File("/Users/theandrealiu/Desktop/AP CSA/Unit12/src/lab18d.dat"));
+		Scanner file = new Scanner(new File("/Users/theandrealiu/Desktop/AP CSA/Unit12/src/lab18e.dat"));
 		int size = file.nextInt();
 		file.nextLine();
 		Word2[] words = new Word2[size];
