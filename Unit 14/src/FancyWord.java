@@ -25,12 +25,11 @@ public class FancyWord
 		   mat[s.length() - 1 - i][i] = s.charAt(i);
 	   }
 	}
-
 	public String toString()
 	{
 		String output="";
 		for (int i = 0; i < mat.length; i++){
-			for (int j = 0; j < mat.length; j++){
+			for (int j = 0; j < mat[0].length; j++){
 				output += mat[i][j] + " "; 
 			}
 			output += "\n";

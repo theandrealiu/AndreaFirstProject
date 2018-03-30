@@ -12,11 +12,9 @@ import static java.lang.System.*;
 public class Maze
 {
    private int[][] maze;
-
 	public Maze()
 	{
 	}
-
 	public Maze(int size, String line)
 	{
 		maze = new int[size][size];
@@ -26,7 +24,6 @@ public class Maze
 			}
 		}
 	}
-
 	public boolean hasExitPath(int r, int c)
 	{
 		if (maze[r][c] == 1){
@@ -45,13 +42,12 @@ public class Maze
 			if (c != maze.length - 1 && maze[r][c + 1] == 1 && hasExitPath(r, c + 1)){
 				return true;
 			}
-			if (r != maze.length - 1 && maze[r + 1][c] == 1 && hasExitPath(r + 1, c)){
+			if (r != maze[0].length - 1 && maze[r + 1][c] == 1 && hasExitPath(r + 1, c)){
 				return true;
 			}
 		}
 		return false;
 	}
-
 	public String toString()
 	{
 		String output="";

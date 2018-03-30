@@ -8,9 +8,8 @@ import static java.lang.System.*;
 
 public class AtCounter
 {
-   private char[][] atMat;
+	private char[][] atMat;
    private int atCount;
-
 	public AtCounter()
 	{
 		atCount=0;
@@ -25,12 +24,8 @@ public class AtCounter
 									{'-','@','-','@','-','@','-','@','@','@'},
 									{'-','@','@','@','@','@','-','@','@','@'}};
 	}
-
 	public int countAts(int r, int c)
 	{
-
-		//add in recursive code to count up the # of @s connected
-		//start checking at spot [r,c]
 		if (atMat[r][c] == '@'){
 			atMat[r][c] = 'x';
 			atCount++;
@@ -53,15 +48,12 @@ public class AtCounter
 				countAts(r,newC);
 			}
 		}
-
 		return atCount;
 	}
-
 	public int getAtCount()
 	{
 		return atCount;
 	}
-
 	public String toString()
 	{
 		String output="";
