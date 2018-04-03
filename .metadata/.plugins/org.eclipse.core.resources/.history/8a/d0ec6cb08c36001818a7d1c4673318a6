@@ -1,0 +1,84 @@
+//© A+ Computer Science  -  www.apluscompsci.com
+//Name -
+//Date -
+//Class -
+//Lab  -
+
+import java.awt.Color;
+import java.awt.Graphics;
+
+public class Block implements Locatable
+{
+	private int xPos;
+	private int yPos;
+	private int width;
+	private int height;
+
+	private Color color;
+	
+	public Block()
+	{
+	}
+	
+	public void setX (int x){
+		xPos = x;
+	}
+	public void setY (int y){
+		yPos = y;
+	}
+	public void setWidth (int wid){
+		width = wid;
+	}
+	public void setHeight (int hei){
+		height = hei;
+	}
+	
+	public int getX (){
+		return xPos;
+	}
+	public int getY (){
+		return yPos;
+	}
+	public int getWidth (){
+		return width;
+	}
+	public int getHeight (){
+		return height;
+	}
+	
+	
+   //add the other set methods
+   
+
+   public void setColor(Color col)
+   {
+
+
+   }
+
+   public void draw(Graphics window)
+   {
+      window.setColor(color);
+      window.fillRect(getX(), getY(), getWidth(), getHeight());
+   }
+
+   public void draw(Graphics window, Color col)
+   {
+
+
+   }
+   
+	public boolean equals(Object obj)
+	{
+
+
+
+
+		return false;
+	}   
+
+   //add the other get methods
+    
+
+   //add a toString() method  - x , y , width, height, color
+}
