@@ -1,0 +1,9 @@
+
+public class Lab3 {
+	public static void main (String[] args){
+		String[] words = {"apple","pear","this","cat"};
+		WordScrambler scramble = new WordScrambler();
+		scramble.mixedWords(words);
+	}
+		
+}
