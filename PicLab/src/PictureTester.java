@@ -22,7 +22,7 @@ public class PictureTester
   public static void testZeroBlue()
   {
     Picture beach = new Picture("/Users/theandrealiu/Desktop/AP CSA/PicLab/src/images/beach.jpg");
-    beach.explore();
+    //beach.explore();
     beach.zeroBlue();
     beach.explore();
   }
@@ -30,7 +30,7 @@ public class PictureTester
   public static void testKeepOnlyBlue()
   {
 	 Picture beach = new Picture("/Users/theandrealiu/Desktop/AP CSA/PicLab/src/images/beach.jpg");
-	 beach.explore();
+	 //beach.explore();
 	 beach.keepOnlyBlue();
 	 beach.explore();
   }
@@ -38,7 +38,7 @@ public class PictureTester
   public static void testKeepOnlyRed()
   {
 	 Picture beach = new Picture("/Users/theandrealiu/Desktop/AP CSA/PicLab/src/images/beach.jpg");
-	 beach.explore();
+	 //beach.explore();
 	 beach.keepOnlyRed();
 	 beach.explore();
   }
@@ -46,7 +46,7 @@ public class PictureTester
   public static void testKeepOnlyGreen()
   {
 	 Picture beach = new Picture("/Users/theandrealiu/Desktop/AP CSA/PicLab/src/images/beach.jpg");
-	 beach.explore();
+	 //beach.explore();
 	 beach.keepOnlyGreen();
 	 beach.explore();
   }
@@ -54,7 +54,7 @@ public class PictureTester
   public static void testNegate()
   {
 	  Picture beach = new Picture("/Users/theandrealiu/Desktop/AP CSA/PicLab/src/images/beach.jpg");
-		 beach.explore();
+		 //beach.explore();
 		 beach.negate();
 		 beach.explore();
   }
@@ -62,7 +62,7 @@ public class PictureTester
   public static void testGrayscale()
   {
 	  Picture beach = new Picture("/Users/theandrealiu/Desktop/AP CSA/PicLab/src/images/beach.jpg");
-		 beach.explore();
+		 //beach.explore();
 		 beach.grayscale();
 		 beach.explore();
   }
@@ -70,7 +70,7 @@ public class PictureTester
   public static void testFixUnderwater()
   {
 	  Picture water = new Picture("/Users/theandrealiu/Desktop/AP CSA/PicLab/src/images/water.jpg");
-		 water.explore();
+		 //water.explore();
 		 water.fixUnderwater();
 		 water.explore();
   }
@@ -79,7 +79,7 @@ public class PictureTester
   public static void testMirrorVertical()
   {
     Picture caterpillar = new Picture("/Users/theandrealiu/Desktop/AP CSA/PicLab/src/images/caterpillar.jpg");
-    caterpillar.explore();
+    //caterpillar.explore();
     caterpillar.mirrorVertical();
     caterpillar.explore();
   }
@@ -88,7 +88,7 @@ public class PictureTester
   public static void testMirrorTemple()
   {
     Picture temple = new Picture("/Users/theandrealiu/Desktop/AP CSA/PicLab/src/images/temple.jpg");
-    temple.explore();
+    //temple.explore();
     temple.mirrorTemple();
     temple.explore();
   }
@@ -96,7 +96,7 @@ public class PictureTester
   public static void testMirrorVerticalRightToLeft()
   {
 	  Picture motorcycle = new Picture("/Users/theandrealiu/Desktop/AP CSA/PicLab/src/images/redMotorcycle.jpg");
-	    motorcycle.explore();
+	    //motorcycle.explore();
 	    motorcycle.mirrorVerticalRightToLeft();
 	    motorcycle.explore();
   }
@@ -104,7 +104,7 @@ public class PictureTester
   public static void testMirrorHorizontal()
   {
 	  Picture motorcycle = new Picture("/Users/theandrealiu/Desktop/AP CSA/PicLab/src/images/redMotorcycle.jpg");
-	    motorcycle.explore();
+	    //motorcycle.explore();
 	    motorcycle.mirrorHorizontal();
 	    motorcycle.explore();
   }
@@ -112,7 +112,7 @@ public class PictureTester
   public static void testMirrorHorizontalBotToTop()
   {
 	  Picture motorcycle = new Picture("/Users/theandrealiu/Desktop/AP CSA/PicLab/src/images/redMotorcycle.jpg");
-	    motorcycle.explore();
+	    //motorcycle.explore();
 	    motorcycle.mirrorHorizontalBotToTop();
 	    motorcycle.explore();
   }
@@ -120,7 +120,7 @@ public class PictureTester
   public static void testMirrorDiagonal()
   {
 	  Picture beach = new Picture("/Users/theandrealiu/Desktop/AP CSA/PicLab/src/images/beach.jpg");
-		 beach.explore();
+		 //beach.explore();
 		 beach.mirrorDiagonal();
 		 beach.explore();
   }
@@ -128,7 +128,7 @@ public class PictureTester
   public static void testMirrorArms()
   {
 	  Picture snowman = new Picture("/Users/theandrealiu/Desktop/AP CSA/PicLab/src/images/snowman.jpg");
-		 snowman.explore();
+		 //snowman.explore();
 		 snowman.mirrorArms();
 		 snowman.explore();
   }
@@ -136,7 +136,7 @@ public class PictureTester
   public static void testMirrorGull()
   {
 	  Picture seagull = new Picture("/Users/theandrealiu/Desktop/AP CSA/PicLab/src/images/seagull.jpg");
-		 seagull.explore();
+		 //seagull.explore();
 		 seagull.mirrorGull();
 		 seagull.explore();
   }
@@ -182,9 +182,9 @@ public class PictureTester
     //testZeroBlue();
     //testKeepOnlyBlue();
     //testKeepOnlyRed();
-    //testKeepOnlyGreen();
+    testKeepOnlyGreen();
     //testNegate();
-    //testGrayscale();
+    testGrayscale();
     //testFixUnderwater();
     //testMirrorVertical();
 	//testMirrorVerticalRightToLeft();
@@ -193,10 +193,10 @@ public class PictureTester
     //testMirrorTemple();
     //testMirrorArms();
     //testMirrorGull();
-    //testMirrorDiagonal();
+    testMirrorDiagonal();
     //testCollage();
     //testCopy();
-	testmyCollage();
+	//testmyCollage();
     //testEdgeDetection();
     //testEdgeDetection2();
     //testChromakey();

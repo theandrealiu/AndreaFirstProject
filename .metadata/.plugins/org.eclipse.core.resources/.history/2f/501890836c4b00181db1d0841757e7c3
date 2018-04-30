@@ -1,0 +1,50 @@
+import java.awt.Image;
+
+
+public class SpaceDog {
+	/**
+	 * Space dog floats around the screen
+	 * If the dog gets hit, the user loses the game.   
+	 * <p>
+	 * This method will add a dog into the midst of the aliens, and should the user
+	 * hit the dog, they lose.  
+	 *
+	 * @param  name the location of the image
+	 * @return      the image at the specified URL
+	 * @see         Image
+	 */
+
+	
+	
+/*
+ * public boolean didCollideLeft(Object obj){
+		Block xd = (Block)obj;
+		if (getX() > xd.getX() && getX() <= xd.getX()+xd.getWidth() && (getY() >= xd.getY() && getY()+getHeight() <= xd.getY()+xd.getHeight())){
+			return true;
+		}
+		return false;
+	}
+	public boolean didCollideRight(Object obj){
+		Block xd = (Block)obj;
+		if (getX()<xd.getX() && getX()+getWidth()>=xd.getX() && (getY() >= xd.getY() && getY()+getHeight() <= xd.getY()+xd.getHeight())){
+			return true;
+		}
+		return false;
+	}
+	public boolean didCollideTop(Object obj){
+		Block xd = (Block)obj;
+		if (getY()+getHeight() >= xd.getY() && getY() < xd.getY()+xd.getHeight() && (getX()>=xd.getX() && getX()+getWidth()<=xd.getX()+xd.getWidth())){
+			return true;
+		}
+		return false;
+	}
+	public boolean didCollideBottom(Object obj){
+		Block xd = (Block)obj;
+		if (getY() <= xd.getY()+xd.getHeight() && getY()+getHeight() > xd.getY() && (getX()>=xd.getX() && getX()+getWidth()<=xd.getX()+xd.getWidth())){
+			return true;
+		}
+		return false;
+	}
+ */
+
+}

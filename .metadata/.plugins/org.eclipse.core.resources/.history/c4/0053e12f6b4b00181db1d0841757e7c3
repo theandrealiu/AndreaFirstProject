@@ -1,0 +1,8 @@
+
+public class AlienAmmo {
+
+	//for(Ammo s: shots2){
+	//s.draw(graphToBack);
+//}
+	
+}

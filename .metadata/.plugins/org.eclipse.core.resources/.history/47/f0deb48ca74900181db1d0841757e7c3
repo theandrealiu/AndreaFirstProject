@@ -1,0 +1,87 @@
+import java.awt.Color;
+import java.awt.Graphics;
+
+public abstract class MovingThing implements Moveable
+{
+	private int xPos;
+	private int yPos;
+	private int width;
+	private int height;
+
+	public MovingThing()
+	{
+		this(10, 10, 10, 10);
+	}
+
+	public MovingThing(int x, int y)
+	{
+		this(x, y, 10, 10);
+	}
+
+	public MovingThing(int x, int y, int w, int h)
+	{
+		//add code here
+		setPos(x, y);
+		setWidth(w);
+		setHeight(h);
+	}
+
+	public void setPos( int x, int y)
+	{
+		//add code here
+		setX(x);
+		setY(y);
+	}
+
+	public void setX(int x)
+	{
+		//add code here
+		xPos = x;
+	}
+
+	public void setY(int y)
+	{
+		//add code here
+		yPos = y;
+	}
+
+	public int getX()
+	{
+		return xPos;   //finish this method
+	}
+
+	public int getY()
+	{
+		return yPos;  //finish this method
+	}
+
+	public void setWidth(int w)
+	{
+		//add code here
+		width = w;
+	}
+
+	public void setHeight(int h)
+	{
+		//add code here
+		height = h;
+	}
+
+	public int getWidth()
+	{
+		return width;  //finish this method
+	}
+
+	public int getHeight()
+	{
+		return height;  //finish this method
+	}
+
+	public abstract void move(String direction);
+	public abstract void draw(Graphics window);
+
+	public String toString()
+	{
+		return getX() + " " + getY() + " " + getWidth() + " " + getHeight();
+	}
+}
