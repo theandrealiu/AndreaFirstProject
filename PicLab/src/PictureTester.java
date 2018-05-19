@@ -172,7 +172,39 @@ public class PictureTester
     swan.explore();
   }
   
-  /** Main method for testing.  Every class can have a main
+  public static void testChromakey()
+  {
+    	Picture mark = new Picture("/Users/theandrealiu/Desktop/AP CSA/PicLab/src/blue-mark (1).jpg");
+    	Picture moon = new Picture("/Users/theandrealiu/Desktop/AP CSA/PicLab/src/moon-surface (1).jpg");
+    	mark.chromakey(moon);  //replace blue pixels in mark with pixels in moon
+   	mark.explore();
+  }
+
+  public static void testEncode()
+  {
+	  Picture beach = new Picture("/Users/theandrealiu/Desktop/AP CSA/PicLab/src/images/beach.jpg");
+	  Picture message = new Picture("/Users/theandrealiu/Desktop/AP CSA/PicLab/src/images/msg.jpg");
+	  beach.explore();
+	  message.explore();
+	  beach.encode(message);
+	  beach.explore();
+	  //beach.decode();
+	  //beach.explore();
+	  
+  }
+	  
+  
+  public static void testDecode()
+  {
+	  Picture apple = new Picture("/Users/theandrealiu/Desktop/AP CSA/PicLab/src/crybytes-apple_icon.jpg");
+	  //Picture message = new Picture("/Users/theandrealiu/Desktop/AP CSA/PicLab/src/images/msg.jpg");
+	  //beach.encode(message);
+	  apple.explore();
+	  apple.decode().explore();
+  }
+  
+
+/** Main method for testing.  Every class can have a main
     * method in Java */
   public static void main(String[] args)
   {
@@ -182,9 +214,9 @@ public class PictureTester
     //testZeroBlue();
     //testKeepOnlyBlue();
     //testKeepOnlyRed();
-    testKeepOnlyGreen();
+    //testKeepOnlyGreen();
     //testNegate();
-    testGrayscale();
+    //testGrayscale();
     //testFixUnderwater();
     //testMirrorVertical();
 	//testMirrorVerticalRightToLeft();
@@ -193,7 +225,7 @@ public class PictureTester
     //testMirrorTemple();
     //testMirrorArms();
     //testMirrorGull();
-    testMirrorDiagonal();
+    //testMirrorDiagonal();
     //testCollage();
     //testCopy();
 	//testmyCollage();
@@ -205,6 +237,9 @@ public class PictureTester
     //testSetRedToHalfValueInTopHalf();
     //testClearBlueOverValue(200);
     //testGetAverageForColumn(0);
+	  //testChromakey();
+	  testEncode();
+	  testDecode();
   }
 }
 

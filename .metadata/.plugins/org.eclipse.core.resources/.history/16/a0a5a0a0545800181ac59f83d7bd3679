@@ -1,0 +1,10 @@
+
+public class Test {
+public static void main(String args[]){
+	int x = 100;
+	int y = 200;
+	int z = y-x;
+	x=50;
+	System.out.println(x+" " +y + " " + z);
+}
+}
