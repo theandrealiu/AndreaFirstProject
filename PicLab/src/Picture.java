@@ -579,7 +579,9 @@ public class Picture extends SimplePicture
   * setting it to odd if the message pixel is black
   * @param messagePict the picture with a message
   */
-  /*public void encode(Picture messagePict)
+   
+  
+  public void encode(Picture messagePict)
   {
   Pixel[][] messagePixels = messagePict.getPixels2D();
   Pixel[][] currPixels = this.getPixels2D();
@@ -592,8 +594,131 @@ public class Picture extends SimplePicture
   {
   // if the current pixel red is odd make it even
   currPixel = currPixels[row][col];
-  if (currPixel.getRed() % 2 == 1)
-  currPixel.setRed(currPixel.getRed() - 1);
+  
+  //Test conditions for Red
+  if (currPixel.getRed() % 4 == 3){
+  currPixel.setRed(currPixel.getRed() - 3);
+  messagePixel = messagePixels[row][col];
+  if (messagePixel.colorDistance(Color.BLACK) < 50)
+  {
+  currPixel.setRed(currPixel.getRed() + 3);
+  count++;
+  }
+  }
+  if (currPixel.getRed() % 2 == 1){
+	  currPixel.setRed(currPixel.getRed() -1);
+	  messagePixel = messagePixels[row][col];
+	  if (messagePixel.colorDistance(Color.BLACK) < 50)
+	  {
+	  currPixel.setRed(currPixel.getRed() + 1);
+	  count++;
+	  }
+  }
+  if (currPixel.getRed() % 8 == 7){
+	  currPixel.setRed(currPixel.getRed() -7);
+	  messagePixel = messagePixels[row][col];
+	  if (messagePixel.colorDistance(Color.BLACK) < 50)
+	  {
+	  currPixel.setRed(currPixel.getRed() + 7);
+	  count++;
+	  }
+  }
+  
+  if (currPixel.getRed() % 6 == 3){
+	  currPixel.setRed(currPixel.getRed() - 3);
+	  messagePixel = messagePixels[row][col];
+	  if (messagePixel.colorDistance(Color.BLACK) < 50)
+	  {
+	  currPixel.setRed(currPixel.getRed() + 3);
+	  count++;
+	  }
+	  }
+  
+  
+  
+  //Test conditions for Blue
+  if (currPixel.getBlue() % 4 == 3){
+	  currPixel.setBlue(currPixel.getBlue() - 3);
+	  messagePixel = messagePixels[row][col];
+	  if (messagePixel.colorDistance(Color.BLACK) < 50)
+	  {
+	  currPixel.setBlue(currPixel.getBlue() + 3);
+	  count++;
+	  }
+	  }
+  
+  if (currPixel.getBlue() % 2 == 1){
+	  currPixel.setBlue(currPixel.getBlue() - 1);
+	  messagePixel = messagePixels[row][col];
+	  if (messagePixel.colorDistance(Color.BLACK) < 50)
+	  {
+	  currPixel.setBlue(currPixel.getBlue() + 1);
+	  count++;
+	  }
+	  }
+  
+  if (currPixel.getBlue() % 8 == 7){
+	  currPixel.setBlue(currPixel.getBlue() - 7);
+	  messagePixel = messagePixels[row][col];
+	  if (messagePixel.colorDistance(Color.BLACK) < 50)
+	  {
+	  currPixel.setBlue(currPixel.getBlue() + 7);
+	  count++;
+	  }
+	  }
+  
+  if (currPixel.getBlue() % 6 == 3){
+	  currPixel.setBlue(currPixel.getBlue() - 3);
+	  messagePixel = messagePixels[row][col];
+	  if (messagePixel.colorDistance(Color.BLACK) < 50)
+	  {
+	  currPixel.setBlue(currPixel.getBlue() + 3);
+	  count++;
+	  }
+	  }
+
+  //Test conditions for Green
+  if (currPixel.getGreen() % 4 == 3){
+	  currPixel.setGreen(currPixel.getGreen() - 3);
+	  messagePixel = messagePixels[row][col];
+	  if (messagePixel.colorDistance(Color.BLACK) < 50)
+	  {
+	  currPixel.setBlue(currPixel.getGreen() + 3);
+	  count++;
+	  }
+	  }
+  
+  if (currPixel.getGreen() % 2 == 1){
+	  currPixel.setGreen(currPixel.getGreen() - 1);
+	  messagePixel = messagePixels[row][col];
+	  if (messagePixel.colorDistance(Color.BLACK) < 50)
+	  {
+	  currPixel.setBlue(currPixel.getGreen() + 1);
+	  count++;
+	  }
+	  }
+  
+  if (currPixel.getGreen() % 8 == 7){
+	  currPixel.setGreen(currPixel.getGreen() - 7);
+	  messagePixel = messagePixels[row][col];
+	  if (messagePixel.colorDistance(Color.BLACK) < 50)
+	  {
+	  currPixel.setBlue(currPixel.getGreen() + 7);
+	  count++;
+	  }
+	  }
+  
+  if (currPixel.getGreen() % 6 == 3){
+	  currPixel.setGreen(currPixel.getGreen() - 3);
+	  messagePixel = messagePixels[row][col];
+	  if (messagePixel.colorDistance(Color.BLACK) < 50)
+	  {
+	  currPixel.setBlue(currPixel.getGreen() + 3);
+	  count++;
+	  }
+	  }
+  
+
   messagePixel = messagePixels[row][col];
   if (messagePixel.colorDistance(Color.BLACK) < 50)
   {
@@ -609,7 +734,9 @@ public class Picture extends SimplePicture
   * red value of the current picture
   * @return the picture with the hidden message
   */
-  /*public Picture decode()
+  
+  
+  public Picture decode()
   {
   Pixel[][] pixels = this.getPixels2D();
   int height = this.getHeight();
@@ -626,7 +753,18 @@ public class Picture extends SimplePicture
   {
   currPixel = pixels[row][col];
   messagePixel = messagePixels[row][col];
-  if (currPixel.getRed() % 2 == 1)
+  if (currPixel.getRed() % 4 == 3 || currPixel.getRed() % 2 == 1 || currPixel.getRed() % 8 == 7 || currPixel.getRed() % 6 == 3)
+  {
+  messagePixel.setColor(Color.BLACK);
+  count++;
+  }
+  if (currPixel.getBlue() % 4 == 3 || currPixel.getBlue() % 2 == 1 || currPixel.getBlue() % 8 == 7 || currPixel.getBlue() % 6 == 3)
+  {
+  messagePixel.setColor(Color.BLACK);
+  count++;
+  }
+  
+  if (currPixel.getGreen() % 4 == 3 || currPixel.getGreen() % 2 == 1 || currPixel.getGreen() % 8 == 7 || currPixel.getGreen() % 6 == 3)
   {
   messagePixel.setColor(Color.BLACK);
   count++;
@@ -635,85 +773,10 @@ public class Picture extends SimplePicture
   }
   System.out.println(count);
   return messagePicture;
-  }*/
-  public void encode(Picture messagePict){
-	  Pixel[][] messagePixels = messagePict.getPixels2D();
-	  Pixel[][] currPixels = this.getPixels2D();
-	  Pixel currPixel = null;
-	  Pixel messagePixel = null;
-	  int count = 0;
-	  for (int row = 0; row < this.getHeight(); row++){
-		  for (int col = 0; col < this.getWidth(); col++){
-			  // if the current pixel red is odd make it even
-			  currPixel = currPixels[row][col];
-			  if (currPixel.getRed() % 10 ==5 || currPixel.getBlue() % 10 == 5||currPixel.getGreen() % 10 == 5){
-				  currPixel.setRed(currPixel.getRed() - 5);
-				  currPixel.setGreen(currPixel.getGreen() - 5);
-				  currPixel.setBlue(currPixel.getBlue() - 5);
-			  }
-			  /*else if (currPixel.getRed() % 3 ==2 || currPixel.getBlue() % 3 == 2||currPixel.getGreen() % 3 == 2){
-				  currPixel.setRed(currPixel.getRed() - 2);
-				  currPixel.setGreen(currPixel.getGreen() - 2);
-				  currPixel.setBlue(currPixel.getBlue() - 2);
-			  }*/
-			  messagePixel = messagePixels[row][col];
-			  if (messagePixel.colorDistance(Color.BLACK) < 50){
-				  currPixel.setRed(currPixel.getRed() + 1);
-				  currPixel.setGreen(currPixel.getGreen() + 1);
-				  currPixel.setBlue(currPixel.getBlue() + 1);
-				  count++;
-			  }
-		  }
-	  }
-  System.out.println(count);
   }
-  /**
-  * Method to decode a message hidden in the
-  * red value of the current picture
-  * @return the picture with the hidden message
-  */
-  public Picture decode()
-  {
-	  Pixel[][] pixels = this.getPixels2D();
-	  int height = this.getHeight();
-	  int width = this.getWidth();
-	  Pixel currPixel = null;
 
-	  Pixel messagePixel = null;
-	  Picture messagePicture = new Picture(height,width);
-	  Pixel[][] messagePixels = messagePicture.getPixels2D();
-	  int count = 0;
-	  for (int row = 0; row < this.getHeight(); row++){
-		  for (int col = 0; col < this.getWidth(); col++){
-			  currPixel = pixels[row][col];
-			  messagePixel = messagePixels[row][col];
-			  if (currPixel.getRed() % 10 ==5 || currPixel.getGreen() % 10 ==5||currPixel.getBlue() % 10 == 5)
-			  {
-				  messagePixel.setColor(Color.BLACK);
-				  count++;
-			  }
-			  /*else if (currPixel.getRed() % 3 == 2 ||currPixel.getGreen() % 3 == 2||currPixel.getBlue() % 3 == 2)
-			  {
-				  messagePixel.setColor(Color.RED);
-				  count++;
-			  }*/
-		  }
-	  }
-  System.out.println(count);
-  	return messagePicture;
-  }
-  
-  /* Main method for testing - each class in Java can have a main 
-   * method 
-   */
-  /*public static void main(String[] args) 
-  {
-    Picture beach = new Picture("/Users/theandrealiu/Desktop/AP CSA/PicLab/src/images/beach.jpg");
-    beach.explore();
-    beach.zeroBlue();
-    beach.explore();
-  }*/
   
 } // this } is the end of class Picture, put all new methods before this
+  
 
 

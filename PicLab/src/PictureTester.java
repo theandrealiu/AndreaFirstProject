@@ -180,7 +180,7 @@ public class PictureTester
    	mark.explore();
   }
 
-  public static void testEncode()
+  public static void testEncodeDecode()
   {
 	  Picture beach = new Picture("/Users/theandrealiu/Desktop/AP CSA/PicLab/src/images/beach.jpg");
 	  Picture message = new Picture("/Users/theandrealiu/Desktop/AP CSA/PicLab/src/images/msg.jpg");
@@ -188,20 +188,19 @@ public class PictureTester
 	  message.explore();
 	  beach.encode(message);
 	  beach.explore();
-	  //beach.decode();
-	  //beach.explore();
+	  beach.decode().explore();
 	  
   }
 	  
   
-  public static void testDecode()
+  /*public static void testDecode()
   {
 	  Picture apple = new Picture("/Users/theandrealiu/Desktop/AP CSA/PicLab/src/crybytes-apple_icon.jpg");
 	  //Picture message = new Picture("/Users/theandrealiu/Desktop/AP CSA/PicLab/src/images/msg.jpg");
 	  //beach.encode(message);
 	  apple.explore();
 	  apple.decode().explore();
-  }
+  }*/
   
 
 /** Main method for testing.  Every class can have a main
@@ -238,8 +237,9 @@ public class PictureTester
     //testClearBlueOverValue(200);
     //testGetAverageForColumn(0);
 	  //testChromakey();
-	  testEncode();
-	  testDecode();
+	  //testEncode();
+	  //testDecode();
+	  testEncodeDecode();
   }
 }
 
